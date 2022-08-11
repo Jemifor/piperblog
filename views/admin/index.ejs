@@ -1,0 +1,17 @@
+<%- include("partials/head"); -%>
+      <form action="/admin/index" method="post">
+        <label for="title">Title:   </label><input type="text" name="title" id="title" placeholder="the title is" required class="form-control" />
+        <label for="category">Category:    </label><select name="category" id="category" class="form-control">
+            <option value="sport">sport</option>
+            <option value="design">design</option>
+            <option value="nigeria">nigeria</option>
+            <option value="us">u. s</option>
+            <option value="world">world</option>
+            <option value="health">health</option>
+            <option value="style">style</option>
+            <option value="culture">culture</option>
+        </select>
+        <label for="content">content:   </label><textarea name="content" id="content"  placeholder="type the post of the day" class="form-control" required id="" cols="30" rows="10"></textarea>
+        <button type="submit" class="form-control-sm">post</button>
+      </form>
+<%- include("partials/footer"); -%>

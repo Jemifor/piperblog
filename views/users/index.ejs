@@ -1,0 +1,12 @@
+<%- include("partials/head"); -%>
+<div class="container">
+  <% blogPost.forEach(function(blog){ %>
+  <h2><%=blog.title %></h2>
+  <span class="primary"><%=blog.category %></span>
+  <p><%=blog.content %></p>
+  <% }); %>
+  <form action="/post/:postName" method="post">
+    <label for=""></label>
+  </form>
+</div>
+<%- include("partials/footer"); -%>

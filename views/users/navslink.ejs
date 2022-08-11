@@ -1,0 +1,15 @@
+<%- include("partials/head"); -%>
+
+<% blogCard.forEach(function(blog){ %>
+    <div class="card">
+        <div class="card-title">
+            <h3><%=blog.title %></h3>
+        </div>
+        <span class="card-header"><%=blog.category %></span>
+        <div class="card-body">
+            <p><%=blog.content %></p>
+        </div>
+    </div>
+   <% }); %>
+
+<%- include("partials/head"); -%>

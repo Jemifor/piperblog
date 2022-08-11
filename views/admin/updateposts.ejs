@@ -1,0 +1,18 @@
+<%- include("partials/head"); -%>
+
+<% integratePost.forEach(function(blog){ %>
+    <div class="card">
+        <div class="card-body">
+          <label for="title">Edit Title: </label><input type="text" name="title" class="form-control" value="<%=blog.title %>" placeholder="Enter Title To Edit" />
+          <label for="category">Edit Category:  </label><input type="text" name="category" class="form-control" value="<%=blog.category %>" id="category" placeholder="Enter Category To Edit">
+          <label for="content">Content: </label><input type="text" name="content" class="form-control" value="<%=blog.content %>" id="content" width="100%" height="200px" />
+          <button type="submit">Update Data</button>
+            <p class="card-text"></p>
+            <form action="/admin/integrate" method="post">
+                <button name="updateData" class="btn btn-secondary">Edit post</button>
+            </form>
+        </div>
+    </div>
+<% }); %>
+
+<%- include("partials/footer"); -%>
